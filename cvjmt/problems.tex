@@ -1,0 +1,75 @@
+\documentclass{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{wrapfig}
+\usepackage{tkz-euclide}
+\usepackage{csquotes}
+
+\title{2021 Castro Valley Junior Math Tournament Problems}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section*{Mooving Cow}
+Bessie the Cow is $5$ meters north of Farmer John's house.
+She starts running east at $2$ meters per second.
+After how many seconds will she be exactly $10$ meters away from Farmer John's house?
+Express your answer in exact form.
+
+\section*{Cowangle}
+\begin{wrapfigure}{r}{0.35\linewidth}
+	\vspace{-20pt}
+	\centering
+	\begin{tikzpicture}
+		\tkzDefPoint(110:2){A}
+		\tkzDefPoint(180:2){B}
+		\tkzDefPoint(0:2){C}
+
+		\tkzDefPointBy[projection=onto B--C](A)
+		\tkzGetPoint{X}
+
+		\tkzDrawPolygon(A,B,C)
+		\tkzDrawSegment(A,X)
+		\tkzLabelPoints[above](A)
+		\tkzLabelPoints[left](B)
+		\tkzLabelPoints[right](C)
+		\tkzLabelPoints[below](X)
+		\tkzMarkRightAngle(B,A,C)
+		\tkzMarkRightAngle(A,X,C)
+		\tkzLabelLine[above left](A,B){$7$}
+		\tkzLabelLine[above right](A,C){$10$}
+		\tkzLabelLine[right](A,X){?}
+	\end{tikzpicture}
+	\vspace{-20pt}
+\end{wrapfigure}
+Bessie the Cow found the following right triangle $ABC$.
+The distance from point $A$ to point $B$ is $7$, and the distance from point $A$ to point $C$ is $10$.
+$\angle A$ is a right angle, and $\overline{AX}$ is the altitude from point $A$ to side $\overline{BC}$.
+What is the length of this altitude (the distance from point $A$ to point $X$)?
+Express your answer in exact form.
+
+\section*{Mooish}
+Farmer Paul has two types of cows: truthy cows and falsy cows.
+Physically, they are indistinguishable.
+They all speak mooish, and they can be distinguished by how they answer questions.
+The truthy cows always reply truthfully, and the falsy cows always lie.
+Bessie had a conversation with three of Farmer Paul's cows: Annabelle, Betsie, and Cornelius.
+Here's a translation of the conversation.
+\begin{displayquote}
+	Bessie: Annabelle, is Betsie truthy or falsy? \\
+	Annabelle: Falsy \\
+	Bessie: Betsie, are the types of Annabelle and Cornelius different? \\
+	Betsie: No. \\
+	Bessie: Talkative lot, aren't they? Cornelius, is Betsie truthy or falsy? \\
+	Cornelius: Truthy.
+\end{displayquote}
+What is the type of each cow?
+
+\section*{Green Cows}
+Help Bessie the Cow answer the question ``How much grass can a green cow chow if green cows can chow grass?''
+Bessie and Elsie both chow grass at constant rates.
+If Bessie can chow all the grass in a field in $3$ hours and Elsie can chow all the grass in the same field in $4$ minutes, how long will it take for them to chow all the grass in this field together?
+Express your answer in exact form.
+\end{document}
