@@ -4,6 +4,10 @@
 \usepackage{wrapfig}
 \usepackage{tkz-euclide}
 \usepackage{csquotes}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true
+}
 
 \title{2021 Castro Valley Junior Math Tournament Problems}
 \author{}
@@ -71,5 +75,63 @@ What is the type of each cow?
 Help Bessie the Cow answer the question ``How much grass can a green cow chow if green cows can chow grass?''
 Bessie and Elsie both chow grass at constant rates.
 If Bessie can chow all the grass in a field in $3$ hours and Elsie can chow all the grass in the same field in $4$ minutes, how long will it take for them to chow all the grass in this field together?
+Express your answer in exact form.
+
+\section*{My Cow Ate My Homework}
+Bessie the Cow obtained Chloe's math homework again.
+While she was enjoying this tasty snack, she noticed one problem that seemed very intersting.
+Here's the problem statement:
+\begin{displayquote}
+	If two real numbers $a$ and $b$ are generate randomly and uniformly such that $-9 < a < 9$ and $-9 < b < 9$, what is the probability that $(a + b)^2 < 2ab + 9$?
+	Express your answer in exact form.
+\end{displayquote}
+Bessie is bad at math, so help her by solving this problem.
+
+\section*{Bullpoop (Look Mom No Proof!)}
+Bessie the Cow found a website called \href{vixra.org}{vixra.org} which mostly publishes high quality scientific bullpoop.
+There's a \href{https://vixra.org/abs/2008.0229}{paper} which presents a simple method that supposedly checks whether integers greater than $5$ are prime.
+It makes the following statement without proof:
+\begin{displayquote}
+    The answer to whether the given numbers are prime numbers is to check that:
+    \begin{itemize}
+        \item[a)] The numbers are not even numbers (the last digit is not divisible by $2$);
+        \item[b)] The last digit of numbers in not $5$;
+        \item[c)] The sum of the digits of each of the remaining numbers is not divisiblie by $3$.
+    \end{itemize}
+    A number that meets the above criteria is either a prime or a power [of a] prime.   
+\end{displayquote}
+Disprove this claim.
+
+\section*{Mooshroom Pizza}
+\begin{wrapfigure}{r}{0.35\linewidth}
+	\vspace{-20pt}
+	\centering
+	\begin{tikzpicture}[scale=0.5]
+		\tkzDefPoint(0,0){A}
+		\tkzDefPoint(0,4){B}
+		\tkzDefPointBy[rotation=center A angle 50](B)
+		\tkzGetPoint{C}
+		\tkzDefPointBy[rotation=center A angle -50](B)
+		\tkzGetPoint{D}
+		\tkzFillSector[rotate,fill=gray!20](A,D)(100)
+		\tkzDrawCircle(A,B)
+		\tkzDrawPolygon[white,fill=white](A,C,D)
+		\tkzDrawSegment(C,D)
+		\tkzDefMidPoint(C,D)
+		\tkzGetPoint{E}
+		\tkzDrawSegment(A,E)
+		\tkzLabelSegment[right](A,E){$21$ cm}
+		\tkzDefPointBy[rotation=center A angle 145](B)
+		\tkzGetPoint{F}
+		\tkzDrawSegment(A,F)
+		\tkzLabelSegment[below right](A,F){$42$ cm}
+	\end{tikzpicture}
+	\vspace{-20pt}
+\end{wrapfigure}
+Farmer John made a mooshroom pizza for the cows.
+(Mooshroom pizzas are ethically sourced and don't contain mooshroom minecraft meat.
+They're called mooshroom pizzas because they contain mushrooms farmed from mooshrooms.)
+Bessie tried to slice it, but she failed miserably, resulting in the cut shown in the following figure.
+If the radius of the pizza is $42$ cm and the cut is $21$ cm away from the center of the pizza, what is the area of the smaller piece of pizza that was cut off?
 Express your answer in exact form.
 \end{document}
