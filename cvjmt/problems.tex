@@ -234,4 +234,78 @@ How many calves do you have?'' \\[0.25cm]
 Farmer Julia, who knew that Cowboy Alex was something of an amateur mathematician, said, ``Well \ldots let me put it like this.
 If you choose two distinct calves of mine at random, the probablity that both of them have white tails is exactly one-half.'' \\[0.25cm]
 How may calves does Farmer Julia have in total?
+
+\section*{Cowld}
+\begin{wrapfigure}{r}{0.35\linewidth}
+    \vspace{-20pt}
+    \centering
+	\begin{tikzpicture}[scale=0.4]
+		\tkzDefPoint(0,0){A}
+		\tkzDefPoint(9,0){B}
+		\tkzDefSquare(A,B)
+		\tkzGetPoints{C}{D}
+		\tkzDrawPolygon[fill=cyan!20](A,B,C,D)
+		\tkzLabelSegment[above](C,D){$\SI{80}{in}$}
+		\tkzLabelSegment[right](B,C){$\SI{80}{in}$}
+
+		\tkzDefPoint(3,3){E}
+		\tkzDefPoint(6,3){F}
+		\tkzDefSquare(E,F)
+		\tkzGetPoints{G}{H}
+		\tkzDrawPolygon[fill=black](E,F,G,H)
+		
+		\tkzDefPoint(3,0){I}
+		\tkzDefPoint(6,0){J}
+		\tkzDefPoint(9,3){K}
+		\tkzDefPoint(9,6){L}
+		\tkzDefPoint(6,9){M}
+		\tkzDefPoint(3,9){N}
+		\tkzDefPoint(0,6){O}
+		\tkzDefPoint(0,3){P}
+		\tkzDrawPolygon[fill=black](E,I,P)
+		\tkzDrawPolygon[fill=black](F,J,K)
+		\tkzDrawPolygon[fill=black](G,L,M)
+		\tkzDrawPolygon[fill=black](H,N,O)
+	\end{tikzpicture}
+	\vspace{-20pt}
+\end{wrapfigure}
+Cowboy Alex wants ot make a blanket for his cows with a specific pattern because they are cold.
+If the blanket uses the pattern $36$ times and one side of the pattern is $80$ inches, at least how many inches of black fabric will he need to make blankets for $20$ cows?
+
+\section*{The Great Cow Chase of 2021}
+Oh no!
+Kiran the ccow is making an escape!
+Kiran is running at $\SI{20}{mph}$.
+Kiran is currently $10$ miles from the end of the fence so Rancher Cedric knows Kiran will make a turn.
+The left side of the fence is $30$ miles long.
+To catch up with Kiran faster, he decides to ride his horse diagonally across the field.
+He is riding his horse at $\SI{30}{mph}$ to cathc Kiran.
+How long will it take for him to catch the cow?
+
+\section*{Rowdy Cow}
+After Rancher Cedric caught Kiran the cow in the Great Cow Chase, Kiran decided to trample the grass and terrorize the chickens.
+Rancher Cedric had enough, and he decided to lock him in a pen.
+The pen is in the shape of an equilateral trianlge, and each side is $500$ meters long.
+The rowdy cow is tied to one corner, so that the portion of the field it can reach is exactly half of the total area.
+Assume that Kiran and the rope have zero width.
+How long is the rope?
+
+\section*{Cowyon}
+\begin{wrapfigure}{r}{0.35\linewidth}
+	\vspace{-20pt}
+	\centering
+	\begin{tikzpicture}[scale=0.25]
+		\tkzDefPoint(0,0){A}
+		\tkzDefPoint(0,12){B}
+		\tkzDefPoint(22,0){C}
+		\tkzDefPoint(22,7){D}
+		\tkzDrawPolygon(A,B,C)
+		\tkzDrawPolygon(A,C,D)
+	\vspace{-20pt}
+	\end{tikzpicture}
+\end{wrapfigure}
+A widely-known bazaar is situated in a great canyon, with vertical cliffs on both sides.
+One cliff is $700$ meters high, wihle the other is $1200$ meters high.
+A zip line runs from the foot of each cliff to the top fo the other cliff; the zip lines are perfectly straight.
+At what height above the ground do the two cables meet?
 \end{document}
