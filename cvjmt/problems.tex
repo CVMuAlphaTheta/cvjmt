@@ -167,4 +167,48 @@ If she adds $11$ students (to the original class of $N$ students), she can evenl
 If she adds $5$ students (to the original $N$ students), she can split the students into groups of $17$.
 If she adds $1$ student, she can divide the students into $4$ groups each containing the same number of students.
 What is the \textbf{second} smallest possible value of $N$?
+
+\section*{Moodern Art}
+\begin{wrapfigure}{r}{0.35\linewidth}
+	\vspace{-20pt}
+	\centering
+	\begin{tikzpicture}[scale=0.8]
+		\tkzDefPoint(0,0){A}
+		\tkzDefPoint(0,5){B}
+		\tkzDefPoint(7,5){C}
+		\tkzDefPoint(7,0){D}
+		\tkzDrawPolygon[thick](A,B,C,D)
+
+		\tkzDefPoint(2,1){E}
+		\tkzDefPoint(2,4){F}
+		\tkzDefPoint(5.5,4){G}
+		\tkzDefPoint(5.5,1){H}
+		\tkzDrawPolygon[thick](E,F,G,H)
+		\tkzLabelSegment[above](F,G){$\SI{94}{cm}$}
+		\tkzLabelSegment[right](G,H){$\SI{87}{cm}$}
+
+		\tkzDefPoint(0,1){I}
+		\tkzDefPoint(2,5){J}
+		\tkzDefPoint(7,4){K}
+		\tkzDefPoint(5.5,0){L}
+		\tkzDrawSegment[thin,arrows=<->]([yshift=0.5cm]E,[yshift=0.5cm]I)
+		\tkzLabelSegment[below]([yshift=0.5cm]E,[yshift=0.5cm]I){$\SI{1829}{cm}$}
+		\tkzDrawSegment[thin,arrows=<->]([xshift=0.5cm]F,[xshift=0.5cm]J)
+		\tkzLabelSegment[left]([xshift=0.5cm]F,[xshift=0.5cm]J){$\SI{173}{cm}$}
+		\tkzDrawSegment[thin,arrows=<->]([yshift=-0.5cm]G,[yshift=-0.5cm]K)
+		\tkzLabelSegment[above]([yshift=-0.5cm]G,[yshift=-0.5cm]K){$\SI{182}{cm}$}
+		\tkzDrawSegment[thin,arrows=<->]([xshift=-0.5cm]H,[xshift=-0.5cm]L)
+		\tkzLabelSegment[right]([xshift=-0.5cm]H,[xshift=-0.5cm]L){$\SI{29}{cm}$}
+	\end{tikzpicture}
+	\vspace{-20pt}
+\end{wrapfigure}
+Bessie the Cow created a new painting.
+It is in the shape of a rectangle $87$ centimeters tall and $94$ centimeters wide.
+She hangs it on a rectangular wall such that the top edge of the painting is $173$ centimeters away from thetop edge of the wall, the left edge of the painting is $1829$ centimeters away from the left edge of the wall, the right edge of the painting is $182$ centimeters away from the right edge of the wall, and the bottom edge of the painting is $29$ centimeters away from the bottom edge of the wall.
+What is the area of the part of the wall that is not covered by the painting?
+
+\section*{woC}
+Bessie the Cow chooses an integer randomly and uniformly from $1000$ to $8375$ inclusive, reverses the digits, then discards any leading zeros.
+What is the expected value of the result?
+Express your answer in exact form.
 \end{document}
