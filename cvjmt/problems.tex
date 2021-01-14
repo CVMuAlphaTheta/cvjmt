@@ -131,7 +131,7 @@ Farmer John made a mooshroom pizza for the cows.
 (Mooshroom pizzas are ethically sourced and don't contain mooshroom meat.
 They're called mooshroom pizzas because they contain mushrooms farmed from mooshrooms.)
 Bessie tried to slice it, but she failed miserably, resulting in the cut shown in the following figure.
-If the radius of the pizza is $\SI{42}{cm}$ cm and the cut is $\SI{21}{cm}$ cm away from the center of the pizza, what is the area of the smaller piece of pizza that was cut off?
+If the radius of the pizza is $\SI{42}{cm}$ and the cut is $\SI{21}{cm}$ away from the center of the pizza, what is the area of the smaller piece of pizza that was cut off?
 Express your answer in exact form.
 
 \section*{Cowcycles}
@@ -204,7 +204,7 @@ What is the \textbf{second} smallest possible value of $N$?
 \end{wrapfigure}
 Bessie the Cow created a new painting.
 It is in the shape of a rectangle $87$ centimeters tall and $94$ centimeters wide.
-She hangs it on a rectangular wall such that the top edge of the painting is $173$ centimeters away from thetop edge of the wall, the left edge of the painting is $1829$ centimeters away from the left edge of the wall, the right edge of the painting is $182$ centimeters away from the right edge of the wall, and the bottom edge of the painting is $29$ centimeters away from the bottom edge of the wall.
+She hangs it on a rectangular wall such that the top edge of the painting is $173$ centimeters away from the top edge of the wall, the left edge of the painting is $1829$ centimeters away from the left edge of the wall, the right edge of the painting is $182$ centimeters away from the right edge of the wall, and the bottom edge of the painting is $29$ centimeters away from the bottom edge of the wall.
 What is the area of the part of the wall that is not covered by the painting?
 
 \section*{woC}
@@ -219,7 +219,7 @@ Express your answer in exact form.
     \includegraphics[scale=0.35]{cowloring.png}
     \vspace{-20pt}
 \end{wrapfigure}
-Bessie the Cow found apiece of paper with this figure printed on it and she wants to color it using red, green, and/or lue.
+Bessie the Cow found apiece of paper with this figure printed on it and she wants to color it using red, green, and/or blue.
 In how many ways can she doe this if the orientation of the figure doesn't matter?
 Each region in the figure must have exactly one of the three colors.
 Two colorings are considered equivalent if one can be obtained by rotating the other.
@@ -232,7 +232,7 @@ How many calves do you have?'' \\[0.25cm]
 ``Rancher Emily next door has twenty, which is more than what I've got.'' \\[0.25cm]
 ``You still haven't told me how many calves you have!'' Cowboy Alex exclaimed. \\[0.25cm]
 Farmer Julia, who knew that Cowboy Alex was something of an amateur mathematician, said, ``Well \ldots let me put it like this.
-If you choose two distinct calves of mine at random, the probablity that both of them have white tails is exactly one-half.'' \\[0.25cm]
+If you choose two distinct calves of mine at random, the probability that both of them have white tails is exactly one-half.'' \\[0.25cm]
 How may calves does Farmer Julia have in total?
 
 \section*{Cowld}
@@ -269,26 +269,18 @@ How may calves does Farmer Julia have in total?
 	\end{tikzpicture}
 	\vspace{-20pt}
 \end{wrapfigure}
-Cowboy Alex wants ot make a blanket for his cows with a specific pattern because they are cold.
+Cowboy Alex wants to make a blanket for his cows with a specific pattern because they are cold.
 If the blanket uses the pattern $36$ times and one side of the pattern is $80$ inches, at least how many inches of black fabric will he need to make blankets for $20$ cows?
 
 \section*{The Great Cow Chase of 2021}
 Oh no!
-Kiran the ccow is making an escape!
+Kiran the cow is making an escape!
 Kiran is running at $\SI{20}{mph}$.
 Kiran is currently $10$ miles from the end of the fence so Rancher Cedric knows Kiran will make a turn.
 The left side of the fence is $30$ miles long.
 To catch up with Kiran faster, he decides to ride his horse diagonally across the field.
-He is riding his horse at $\SI{30}{mph}$ to cathc Kiran.
+He is riding his horse at $\SI{30}{mph}$ to catch Kiran.
 How long will it take for him to catch the cow?
-
-\section*{Rowdy Cow}
-After Rancher Cedric caught Kiran the cow in the Great Cow Chase, Kiran decided to trample the grass and terrorize the chickens.
-Rancher Cedric had enough, and he decided to lock him in a pen.
-The pen is in the shape of an equilateral trianlge, and each side is $500$ meters long.
-The rowdy cow is tied to one corner, so that the portion of the field it can reach is exactly half of the total area.
-Assume that Kiran and the rope have zero width.
-How long is the rope?
 
 \section*{Cowyon}
 \begin{wrapfigure}{r}{0.35\linewidth}
@@ -305,7 +297,41 @@ How long is the rope?
 	\end{tikzpicture}
 \end{wrapfigure}
 A widely-known bazaar is situated in a great canyon, with vertical cliffs on both sides.
-One cliff is $700$ meters high, wihle the other is $1200$ meters high.
+One cliff is $700$ meters high, while the other is $1200$ meters high.
 A zip line runs from the foot of each cliff to the top fo the other cliff; the zip lines are perfectly straight.
 At what height above the ground do the two cables meet?
+
+\section*{Rowdy Cow}
+After Rancher Cedric caught Kiran the cow in the Great Cow Chase, Kiran decided to trample the grass and terrorize the chickens.
+Rancher Cedric had enough, and he decided to lock him in a pen.
+The pen is in the shape of an equilateral triangle, and each side is $500$ meters long.
+The rowdy cow is tied to one corner, so that the portion of the field it can reach is exactly half of the total area.
+Assume that Kiran and the rope have zero width.
+How long is the rope?
+
+\section*{The Farmer's Cownundrum}
+\begin{wrapfigure}{r}{0.35\linewidth}
+	\vspace{-20pt}
+	\centering
+	\begin{tikzpicture}[scale=0.3]
+		\tkzDefPoint(0,10){A}
+		\tkzDefPoint(4,10){B}
+		\tkzDefPoint(4,0){C}
+		\tkzDefPoint(8,0){D}
+		\tkzDefMidPoint(C,D)
+		\tkzGetPoint{E}
+		\tkzDefPoint(8,10){F}
+		\tkzDefPoint(12,10){G}
+
+		\tkzDrawSegments[thin](A,B B,C C,D D,F F,G)
+		\tkzDrawSegments[thick](B,E E,F)
+		\tkzLabelSegment[left](B,C){$\SI{100}{m}$}
+		\tkzLabelSegment[below](C,D){$\SI{36}{m}$}
+	\end{tikzpicture}
+	\vspace{-20pt}
+\end{wrapfigure}
+Farmer Robert submits the blueprints for his cow farm to his contractor, but the contractor misreads the information!
+The Farm is now separated by a $36$ meter long divide that is $100$ meters deep.
+Robert has a huge ego, so he believes that the bridge should be shaped in a V because it is the first letter of his last name.
+Assuming that each side of the V is equal in length and reaches the floor, how long would the bridge be in meters?
 \end{document}
