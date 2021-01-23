@@ -371,4 +371,85 @@ Cowboy Alex gave Bessie the Cow a new racing game called Moorio Kart!
 She let all one hundred of her cow friends play, and then asked each cow whether they liked each of the three courses.
 $65$ cows said they liked Bowser's Cowstle, $75$ cows said they liked Cowconut Mall, and $85$ cows said they liked Moo Moo Meadows.
 What is the fewest number of cows that could have said they liked all three courses?
+
+\section*{Cownt the Rectangles}
+\begin{wrapfigure}{r}{0.35\linewidth}
+	\vspace{-20pt}
+	\centering
+	\begin{tikzpicture}[scale=0.55]
+		\tkzDefPoint(0,0){A}
+		\tkzDefPoint(0,4){B}
+		\tkzDefPoint(10,4){C}
+		\tkzDefPoint(10,0){D}
+		\tkzDrawPolygon(A,B,C,D)
+
+		\tkzDefPoint(0,1){E}
+		\tkzDrawSegment(E,[xshift=10cm]E)
+		\tkzDefPoint(0,2){F}
+		\tkzDrawSegment(F,[xshift=10cm]F)
+		\tkzDefPoint(0,3){G}
+		\tkzDrawSegment(G,[xshift=10cm]G)
+
+		\tkzDefPoint(2,0){H}
+		\tkzDrawSegment(H,[yshift=4cm]H)
+		\tkzDefPoint(4,0){I}
+		\tkzDrawSegment(I,[yshift=4cm]I)
+		\tkzDefPoint(6,0){J}
+		\tkzDrawSegment(J,[yshift=1cm]J)
+		\tkzDrawSegment([yshift=2cm]J,[yshift=4cm]J)
+		\tkzDefPoint(8,0){K}
+		\tkzDrawSegment(K,[yshift=4cm]K)
+	\end{tikzpicture}
+	\vspace{-20pt}
+\end{wrapfigure}
+Bessie the Cow found a piece of paper with the following figure printed on it.
+She wants to know how many rectangles are in the figure.
+Help her by finding the number of rectangles of any size that is in this figure, including rectangles which contain multiple smaller rectangles.
+
+\section*{Cowlifornia}
+Bessie the Cow and her siblings have always dreamed of living in Cowlifornia.
+However, Bessie has a lot of siblings, so it'll be hard to find a farm they van all moove to!
+Bessie has two more sisters than brothers.
+Her brother, Kiran, has twice as many sisters as brothers.
+How many siblings does Bessie have?
+
+\section*{Moogic}
+\begin{wrapfigure}{r}{0.35\linewidth}
+	\vspace{-20pt}
+	\centering
+	\begin{tikzpicture}
+		\tkzDefPoint(0,0){A}
+		\tkzDefPoint(3,0){B}
+		\tkzDefSquare(A,B)
+		\tkzGetPoints{C}{D}
+		\tkzDrawPolygon(A,B,C,D)
+
+		\tkzDefPoint(1,3){E}
+		\tkzDefPoint(2,3){F}
+		\tkzDrawSegment(E,[yshift=-3cm]E)
+		\tkzDrawSegment(F,[yshift=-3cm]F)
+
+		\tkzDefPoint(0,2){G}
+		\tkzDefPoint(0,1){H}
+		\tkzDrawSegment(G,[xshift=3cm]G)
+		\tkzDrawSegment(H,[xshift=3cm]H)
+
+		\tkzDefPoint(1,2){J}
+		\tkzDefPoint(2,2){K}
+		\tkzDefPoint(1,1){L}
+		\tkzDefPoint(2,1){M}
+
+		\foreach \name\value in {D/$4$, E/$29$, F/$15$, G/$27$, J/$16$, K/$3$, H/$17$, L/$7$, M/$28$}
+		{
+			\tkzLabelPoint(\name){\value}
+		}
+
+
+	\end{tikzpicture}
+	\vspace{-20pt}
+\end{wrapfigure}
+Bessie the Cow wanted to learn how to do magic, but she got distracted on the internet and ended up learning about magic squares.
+In a magic square, the sum of the numbers in each row, each column, and the two main diagonals are the same.
+If exactly two numbers are changed in this grid, the result is a magic square.
+Which two numbers must be changed and what values should they be changed?
 \end{document}
