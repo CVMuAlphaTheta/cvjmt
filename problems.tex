@@ -7,6 +7,7 @@
 \usepackage{hyperref}
 \usepackage{graphicx}
 \usepackage{siunitx}
+\usepackage{enumitem}
 
 \title{2021 Castro Valley Junior Math Tournament Problems}
 \author{}
@@ -61,16 +62,16 @@ The truthy cows always reply truthfully, and the falsy cows always lie.
 Bessie had a conversation with three of Farmer Paul's cows: Annabelle, Betsie, and Cornelius.
 Here's a translation of the conversation.
 \begin{displayquote}
-	Bessie: Annabelle, is Betsie truthy or falsy? \\
-	Annabelle: Falsy \\
-	Bessie: Betsie, are the types of Annabelle and Cornelius different? \\
-	Betsie: No. \\
-	Bessie: Talkative lot, aren't they? Cornelius, is Betsie truthy or falsy? \\
-	Cornelius: Truthy.
+    Bessie: Are any of you falsy? \\
+    Annabelle: At least one of us is falsy. \\
+    Bessie: Are Bossy and Cornelius both truthy? \\
+    Bossy: Yes.
+    Bessie: Are Annabelle and Bossy both truthy? \\
+    Cornelius: No.
 \end{displayquote}
 What is the type of each cow?
 
-\section*{Green Cows}
+\section*{Green Cows 1}
 Help Bessie the Cow answer the question ``How much grass can a green cow chow if green cows can chow grass?''
 Bessie and Elsie both chow grass at constant rates.
 If Bessie can chow all the grass in a field in $3$ hours and Elsie can chow all the grass in the same field in $4$ minutes, how long will it take for them to chow all the grass in this field together?
@@ -86,64 +87,37 @@ Here's the problem statement:
 \end{displayquote}
 Bessie is bad at math, so help her by solving this problem.
 
-\section*{Look Mom No Proof!}
+\section*{Look Mom No Proof! (Elementary School Version)}
 Bessie the Cow found a website called \url{vixra.org} which mostly publishes scientific nonsense.
 There's a paper (\url{https://vixra.org/abs/2008.0229}) which presents a simple method that supposedly checks whether integers greater than $5$ are prime.
 It makes the following statement without proof:
 \begin{displayquote}
     The answer to whether the given numbers are prime numbers is to check that:
-    \begin{itemize}
-        \item[a)] The numbers are not even numbers (the last digit is not divisible by $2$);
-        \item[b)] The last digit of numbers in not $5$;
-        \item[c)] The sum of the digits of each of the remaining numbers is not divisible by $3$.
-    \end{itemize}
+    \begin{enumerate}[label=\alph*)]
+        \item The numbers are not even numbers (the last digit is not divisible by $2$);
+        \item The last digit of numbers in not $5$;
+        \item The sum of the digits of each of the remaining numbers is not divisible by $3$.
+    \end{enumerate}
     A number that meets the above criteria is either a prime or a power [of a] prime.
 \end{displayquote}
-Disprove this claim.
+Find a counterexample that disproves this claim.
+(This problem has multiple correct answers.
+You only need to find one of them.)
 
-\section*{Mooshroom Pizza}
-\begin{wrapfigure}{r}{0.35\linewidth}
-	\vspace{-20pt}
-	\centering
-	\begin{tikzpicture}[scale=0.5]
-		\tkzDefPoint(0,0){A}
-		\tkzDefPoint(0,4){B}
-		\tkzDefPointBy[rotation=center A angle 60](B)
-		\tkzGetPoint{C}
-		\tkzDefPointBy[rotation=center A angle -60](B)
-		\tkzGetPoint{D}
-		\tkzFillSector[fill=gray!20](A,D)(C)
-		\tkzDrawCircle(A,B)
-		\tkzDrawPolygon[white,fill=white](A,C,D)
-		\tkzDrawLine(C,D)
-		\tkzDefMidPoint(C,D)
-		\tkzGetPoint{E}
-		\tkzDrawSegment(A,E)
-		\tkzLabelSegment[right](A,E){$\SI{21}{cm}$}
-		\tkzDefPointBy[rotation=center A angle 145](B)
-		\tkzGetPoint{F}
-		\tkzDrawSegment(A,F)
-		\tkzLabelSegment[below right](A,F){\SI{42}{cm}}
-	\end{tikzpicture}
-	\vspace{-20pt}
-\end{wrapfigure}
-Farmer John made a mooshroom pizza for the cows.
-(Mooshroom pizzas are ethically sourced and don't contain mooshroom meat.
-They're called mooshroom pizzas because they contain mushrooms farmed from mooshrooms.)
-Bessie tried to slice it, but she failed miserably, resulting in the cut shown in the following figure.
-If the radius of the pizza is $\SI{42}{cm}$ and the cut is $\SI{21}{cm}$ away from the center of the pizza, what is the area of the smaller piece of pizza that was cut off?
-Express your answer in exact form.
-
-\section*{Cowcycles}
-Bessie the Cow is participating in a bike race!
-There are $5$ cows in the race, and they all bike at a constant speed on a circular track starting from the same position.
-Bella takes $5$ minutes to complete one lap, Bessie takes $9$ minutes to complete one lap, Betty takes $3.5$ minutes to complete one lap, Betsie takes $9.8$ minutes to complete one lap, and Bossy takes $4.7$ minutes to complete one lap.
-The cows have a weird tradition where once cow passes another after the race starts, they will instantaneously elbow bump each other.
-In other words, each of the ${5 \choose 2} = 10$ possible pairs of cows will elbow bump each other any time they are in the exact same position after the start of the race.
-For example, Bella and Bessie will elbow bump each other for the first time exactly $11.25$ minutes after the start of the race.
-The cows race for $4$ hours.
-How many elbow bumps will  occur in total?
-Include any elbow bumps that occur exactly $4$ hours after the start of the race.
+\section*{Look Mom No Proof! (Middle School Version)}
+Bessie the Cow found a website called \url{vixra.org} which mostly publishes scientific nonsense.
+There's a paper (\url{https://vixra.org/abs/2008.0229}) which presents a simple method that supposedly checks whether integers greater than $5$ are prime.
+It makes the following statement without proof:
+\begin{displayquote}
+    The answer to whether the given numbers are prime numbers is to check that:
+    \begin{enumerate}[label=\alph*)]
+        \item The numbers are not even numbers (the last digit is not divisible by $2$);
+        \item The last digit of numbers in not $5$;
+        \item The sum of the digits of each of the remaining numbers is not divisible by $3$.
+    \end{enumerate}
+    A number that meets the above criteria is either a prime or a power [of a] prime.
+\end{displayquote}
+Find the smallest counterexample that disproves this claim.
 
 \section*{Cowtapult}
 \begin{wrapfigure}{r}{0.35\linewidth}
@@ -159,14 +133,6 @@ The cowtapult launches a hay bale with a horizontal speed of $20$ meters per sec
 Bessie wants to hit the enemy cart using the cowtapult.
 When should she launch the hay bale?
 Express your answer as a decimal in seconds, rounded to three digits after the decimal point.
-
-\section*{Cowputing}
-Bessie the Cow's new computing class has $N$ students.
-If she kicks out $3$ students, she can split the students into groups of $8$.
-If she adds $11$ students (to the original class of $N$ students), she can evenly split the students into groups of $5$.
-If she adds $5$ students (to the original $N$ students), she can split the students into groups of $17$.
-If she adds $1$ student, she can divide the students into $4$ groups each containing the same number of students.
-What is the \textbf{second} smallest possible value of $N$?
 
 \section*{Moodern Art}
 \begin{wrapfigure}{r}{0.35\linewidth}
@@ -207,11 +173,6 @@ It is in the shape of a rectangle $87$ centimeters tall and $94$ centimeters wid
 She hangs it on a rectangular wall such that the top edge of the painting is $173$ centimeters away from the top edge of the wall, the left edge of the painting is $1829$ centimeters away from the left edge of the wall, the right edge of the painting is $182$ centimeters away from the right edge of the wall, and the bottom edge of the painting is $29$ centimeters away from the bottom edge of the wall.
 What is the area of the part of the wall that is not covered by the painting?
 
-\section*{woC}
-Bessie the Cow chooses an integer randomly and uniformly from $1000$ to $8375$ inclusive, reverses the digits, then discards any leading zeros.
-What is the expected value of the result?
-Express your answer in exact form.
-
 \section*{Cowloring}
 \begin{wrapfigure}{r}{0.35\linewidth}
     \vspace{-20pt}
@@ -219,25 +180,19 @@ Express your answer in exact form.
     \includegraphics[scale=0.35]{cowloring.png}
     \vspace{-20pt}
 \end{wrapfigure}
-Bessie the Cow found apiece of paper with this figure printed on it and she wants to color it using red, green, and/or blue.
+Bessie the Cow found a piece of paper with this figure printed on it and she wants to color it using red, green, and/or blue.
 In how many ways can she doe this if the orientation of the figure doesn't matter?
 Each region in the figure must have exactly one of the three colors.
-Two colorings are considered equivalent if one can be obtained by rotating the other.
+Two coloring schemes are considered equivalent if one can be obtained by rotating the other.
 
-\section*{Cownt the Calfs}
-``I see you've got a new calf,'' said Cowboy Alex, peering probingly into Farmer Julia's cow farm.
-``Its tail is white too, like my socks.
-How many calves do you have?'' \\[0.25cm]
-``Not a lot,'' said Farmer Julia.
-``Rancher Emily next door has twenty, which is more than what I've got.'' \\[0.25cm]
-``You still haven't told me how many calves you have!'' Cowboy Alex exclaimed. \\[0.25cm]
-Farmer Julia, who knew that Cowboy Alex was something of an amateur mathematician, said, ``Well \ldots let me put it like this.
-If you choose two distinct calves of mine at random, the probability that both of them have white tails is exactly one-half.'' \\[0.25cm]
-How may calves does Farmer Julia have in total?
+\section*{woC}
+Bessie the Cow chooses an integer randomly and uniformly from $1000$ to $8375$ inclusive, reverses the digits, then discards any leading zeros.
+What is the expected value of the result?
+Express your answer in exact form.
 
 \section*{Cowld}
-\begin{wrapfigure}{r}{0.35\linewidth}
-    \vspace{-20pt}
+\begin{wrapfigure}{r}{0.3\linewidth}
+    \vspace{-50pt}
     \centering
 	\begin{tikzpicture}[scale=0.4]
 		\tkzDefPoint(0,0){A}
@@ -245,8 +200,8 @@ How may calves does Farmer Julia have in total?
 		\tkzDefSquare(A,B)
 		\tkzGetPoints{C}{D}
 		\tkzDrawPolygon[fill=cyan!20](A,B,C,D)
-		\tkzLabelSegment[above](C,D){$\SI{80}{in}$}
-		\tkzLabelSegment[right](B,C){$\SI{80}{in}$}
+		\tkzLabelSegment[above](C,D){$\SI{90}{in}$}
+		\tkzLabelSegment[right](B,C){$\SI{90}{in}$}
 
 		\tkzDefPoint(3,3){E}
 		\tkzDefPoint(6,3){F}
@@ -270,20 +225,17 @@ How may calves does Farmer Julia have in total?
 	\vspace{-20pt}
 \end{wrapfigure}
 Cowboy Alex wants to make a blanket for his cows with a specific pattern because they are cold.
-If the blanket uses the pattern $36$ times and one side of the pattern is $80$ inches, at least how many inches of black fabric will he need to make blankets for $20$ cows?
+If the blanket uses the pattern $36$ times and one side of the pattern is $90$ inches long, how many square inches of black fabric will he need to make blankets for $20$ cows? This diagram is drawn to scale. Each of the small squares in the pattern are \SI{30}{in} by \SI{30}{in}.
 
-\section*{The Great Cow Chase of 2021}
-Oh no!
-Kiran the cow is making an escape!
-Kiran is running at $\SI{20}{mph}$.
-Kiran is currently $10$ miles from the end of the fence so Rancher Cedric knows Kiran will make a turn.
-The left side of the fence is $30$ miles long.
-To catch up with Kiran faster, he decides to ride his horse diagonally across the field.
-He is riding his horse at $\SI{30}{mph}$ to catch Kiran.
-How long will it take for him to catch the cow?
+\section*{The Great Cow Chase}
+Oh no! Kiran the cow is making an escape!
+Kiran is $10$ miles south of Farmer John, and he starts running east at $15$ miles per hour.
+Farmer John can move at $30$ miles per hour.
+How long will it take for Farmer John to catch Kiran if Farmer John uses the fastest possible strategy?
+Express your answer in seconds, rounded to the nearest integer.
 
-\section*{Cowyon}
-\begin{wrapfigure}{r}{0.35\linewidth}
+\section*{Baa Baa Bazaar}
+\begin{wrapfigure}{r}{0.5\linewidth}
 	\vspace{-20pt}
 	\centering
 	\begin{tikzpicture}[scale=0.25]
@@ -293,12 +245,14 @@ How long will it take for him to catch the cow?
 		\tkzDefPoint(22,7){D}
 		\tkzDrawPolygon(A,B,C)
 		\tkzDrawPolygon(A,C,D)
+		\tkzLabelSegment[left](A,B){\SI{1200}{m}}
+		\tkzLabelSegment[right](C,D){\SI{700}{m}}
 	\vspace{-20pt}
 	\end{tikzpicture}
 \end{wrapfigure}
-A widely-known bazaar is situated in a great canyon, with vertical cliffs on both sides.
+Bessie the Cow wants to visit the famous Baa Baa Bazaar, but the sheep have set it up in a great canyon with vertical cliffs on both sides.
 One cliff is $700$ meters high, while the other is $1200$ meters high.
-A zip line runs from the foot of each cliff to the top fo the other cliff; the zip lines are perfectly straight.
+A perfectly straight zip line runs from the foot of each cliff to the top of the other cliff.
 At what height above the ground do the two cables meet?
 
 \section*{Rowdy Cow}
@@ -306,34 +260,8 @@ After Rancher Cedric caught Kiran the cow in the Great Cow Chase, Kiran decided 
 Rancher Cedric had enough, and he decided to lock him in a pen.
 The pen is in the shape of an equilateral triangle, and each side is $500$ meters long.
 The rowdy cow is tied to one corner, so that the portion of the field it can reach is exactly half of the total area.
-Assume that Kiran and the rope have zero width.
-How long is the rope?
-
-\section*{The Farmer's Cownundrum}
-\begin{wrapfigure}{r}{0.35\linewidth}
-	\vspace{-20pt}
-	\centering
-	\begin{tikzpicture}[scale=0.3]
-		\tkzDefPoint(0,10){A}
-		\tkzDefPoint(4,10){B}
-		\tkzDefPoint(4,0){C}
-		\tkzDefPoint(8,0){D}
-		\tkzDefMidPoint(C,D)
-		\tkzGetPoint{E}
-		\tkzDefPoint(8,10){F}
-		\tkzDefPoint(12,10){G}
-
-		\tkzDrawSegments[thin](A,B B,C C,D D,F F,G)
-		\tkzDrawSegments[thick](B,E E,F)
-		\tkzLabelSegment[left](B,C){$\SI{100}{m}$}
-		\tkzLabelSegment[below](C,D){$\SI{36}{m}$}
-	\end{tikzpicture}
-	\vspace{-20pt}
-\end{wrapfigure}
-Farmer Robert submits the blueprints for his cow farm to his contractor, but the contractor misreads the information!
-The Farm is now separated by a $36$ meter long divide that is $100$ meters deep.
-Robert has a huge ego, so he believes that the bridge should be shaped in a V because it is the first letter of his last name.
-Assuming that each side of the V is equal in length and reaches the floor, how long would the bridge be in meters?
+If Kiran and the rope both have zero width, how long is the rope in meters?
+Express your answer as a decimal rounded to two digits after the decimal point.
 
 \section*{Moocraft}
 Bessie the Cow's new hobby is trying to beat the video game Moocraft as fast as possible.
@@ -345,7 +273,7 @@ Round your answer to the nearest integer.
 
 \section*{Moss-cow}
 Bessie the Cow is currently staying in London during a world tour to find the tastiest grass.
-She prepares to visit Moscow, but wants to know how long it will take to get there.
+She prepares to visit Moscow next.
 The route from London to Moscow is $1600$ miles long.
 First, Bessie will ride a train moving at $60$ miles per hour.
 If the whole journey took $19.5$ hours, how long did Bessie spend on the plane?
@@ -357,20 +285,12 @@ The $42$ cows plan to distribute themselves among $6$ pastures.
 To make sure Farmer John doesn't get suspicious, there must be at least two cows in each pasture, each pasture must have a different number of cows, and pasture can have exactly $3$ or $3$ cows.
 To help the cows calculate their chance of succeeding, find the greatest number of cows that can be in any one pasture.
 
-\section*{Bessie Buys Brass Bells by the Big Barn}
-Bessie the Cow is interested in buying new bells for herself and her friends.
-The Barnyard Bazaar sells three different types of bells: blue bells, brown bells, and burgundy bells.
-Each type of bell has a constant cost per bell.
-Three blue bells and one brown bell would cost a total of $35$ cents.
-Two brown bells and four burgundy bells would cost a total of $28$ cents.
-One blue bell and two burgundy bells would cost a total of $9$ cents.
-How much would four blue bells and three brown bells cost?
-
 \section*{Moorio Kart}
 Cowboy Alex gave Bessie the Cow a new racing game called Moorio Kart!
 She let all one hundred of her cow friends play, and then asked each cow whether they liked each of the three courses.
-$65$ cows said they liked Bowser's Cowstle, $75$ cows said they liked Cowconut Mall, and $85$ cows said they liked Moo Moo Meadows.
-What is the fewest number of cows that could have said they liked all three courses?
+$86$ cows said they liked Bowser Cowstle, $25$ cows said they liked Cowconut Mall, and $67$ cows said they liked Moo Moo Meadows.
+Some cows might have liked two courses, and no cow liked all three courses.
+What is the fewest possible number of friends which Bessie could have had?
 
 \section*{Cownt the Rectangles}
 \begin{wrapfigure}{r}{0.35\linewidth}
@@ -405,13 +325,6 @@ What is the fewest number of cows that could have said they liked all three cour
 Bessie the Cow found a piece of paper with the following figure printed on it.
 She wants to know how many rectangles are in the figure.
 Help her by finding the number of rectangles of any size that is in this figure, including rectangles which contain multiple smaller rectangles.
-
-\section*{Cowlifornia}
-Bessie the Cow and her siblings have always dreamed of living in Cowlifornia.
-However, Bessie has a lot of siblings, so it'll be hard to find a farm they van all moove to!
-Bessie has two more sisters than brothers.
-Her brother, Kiran, has twice as many sisters as brothers.
-How many siblings does Bessie have?
 
 \section*{Moogic}
 \begin{wrapfigure}{r}{0.35\linewidth}
@@ -455,48 +368,43 @@ Which two numbers must be changed and what values should they be changed?
 
 \section*{Green Cows 2}
 Bessie the Cow still hasn't figured out how much grass a green cow can chow if green cows can chow grass.
-If $5$ green cows can chow $8$ square meters of grass in $20$ minutes, how many green cows are needed to chow $\SI{10}{m^2}$ of grass in $15$ minutes?
+If $5$ green cows can chow $8$ square meters of grass in $20$ minutes, how many green cows are needed to chow $10$ square meters of grass in at most $15$ minutes?
 Assume that all green cows in this problem chow grass at the same constant rate.
 
 \section*{Cowkies}
-When Bessie the Cow was visiting a nearby farm, she noticed that there was a large herd of cows.
+When Bessie the Cow was visiting a nearby farm, she noticed that there is a large group of cows.
 She brought some cookies to make new cow friends, but she didn't know how many cows there were in the group!
 She counted a total of $87$ black spots $83$ white spots.
 Each cow either has two black spots and three white spots or three black spots and two white spots.
-How many cows are in the group, excluding Bessie?
+How many cows are in the group, not including Bessie?
 
 \section*{Moo York Bagels}
-Bessie the Cow now lives in Moo York.
-As a young country-born-and-raised heifer, she feels a bit homesick and misses her local cuisine.
-Luckily, she discovered Billie's Bagel Business.
-Every day, she selects a bagel based on her mood.
+Bessie the Cow now lives in Moo York and every day she buys a bagel from Billie the Bagel Cow.
+The type of bagel that she buys depends on her mood.
 If Bessie is happy, she will spend $\$1000$ on a toasted blueberry bagel.
-If Bessie is sad, she will spent $\$620$ on a strawberry cream cheese bagel.
-On any given day, Bessie has a $68\%$ chance of being happy.
+If Bessie is sad, she will spend $\$620$ on a strawberry cream cheese bagel.
+On any given day Bessie has a $68\%$ chance of being happy.
 On average, how much does Bessie spend on the bagels each day?
-Round your answers to the nearest cent.
+Round your answer to the nearest cent.
 
 \section*{On the Moove}
 Bessie the Cow and her sister Bailey the Cow leave their barn at the same time, running at a constant speed on a narrow and straight road.
 Bessie went northbound traveling at $42$ miles per hour.
 After $2$ hours, Bessie and Bailey are $30$ miles apart.
-What was Bailey's speed in miles per hour?
+What was Bailey's speed in miles per hour and which direction was she traveling in?
 
 \section*{Completely Organic Watermelons (C.O.W.)}
 Bessie the Cow was looking through the Barnyard Bazaar for some fresh produce when she spotted some Completely Organic Watermelons!
 Bella the Watermelon Cow has $18$ \emph{different} watermelons for sale: $5$ are large, $6$ are medium, and $7$ are small.
 Bessie wants to buy three watermelons that aren't all the same size.
-In other words, she wants to buy three watermelons of at least two different sizes.
+(In other words, she wants to buy three watermelons of at least two different sizes.)
 In how many ways can this be done?
-The order in which she buys them doesn't matter, but each watermelon is unique and different from others of the same size category.
+The order in which she buys them doesn't matter, but each watermelon is unique and different from other watermelons of the same size.
 
-\section*{Soccow Tournament}
+\section*{Soccow}
 Rancher Cedric decided to hold a soccow tournament for his cows.
-Bessie the Cow's team, the Tactful Tauruses, lost $7$ or their first $9$ games.
-However, Bessie decided that she wasn't going to accept losing anymore, and encouraged her team to work harder
-Bessie's team ended up winning $75\%$ of their remaining games.
-They had victories in exactly $\frac{2}{3}$ of all their games.
-In all, how many games did the Tactful Tauruses win?
+Bessie the Cow's team, the Tactful Tauruses, lost $8$ or their first $10$ games.
+If they will play $30$ more games in this tournament, how many of the remaining games do they need to win in order to make the total number of games which they won at least twice as much as the total number of games which they lost?
 
 \section*{Cowculus}
 Bessie the Cow really enjoys doing math, so she decided to order two cowculus books from the Barnyard Bazaar: the first book is a cowculus textbook, and the second is a cowculus workbook.
@@ -525,21 +433,13 @@ She wants to reserve the shaded region of her new pen for tasty grass to grow.
 The area of this region is $\SI{80}{cm^2}$.
 What is the area of Bessie's whole pen in cm$^2$?
 
-\section*{Crack the Cowde}
-Bessie the Cow isn't very good at cybersecurity!
-She made the password to her Moocraft account only three numerical digits long.
-No digit is 0.
-The hundreds digit is a multiple of 4, the tens digit is a perfect square, and the ones digit is a multiple of 3.
-The digits are in decreasing order.
-What is Bessie's Moocraft password?
-
 \section*{Farmer Pearson's Pears}
 Cowboy Alex just ran out of fresh fruit!
 He decided to visit Farmer Pearson for some of his world-famous pears.
 Farmer Pearson puts together $18$ pears in one pack and he only sells whole packs.
-If Cowboy Alex wants to buy at least five dozen pears, how many packs does he need to buy at the minimum?
+If Cowboy Alex wants to buy at least five dozen pears, how many packs does he need to buy?
 
-\section*{Moolik}
+\section*{Mooilk}
 Farmer Julia wants to measure out exactly $25.5$ gallons of milk in a large storage bin. 
 The bin is initially empty. 
 Farmer Julia has a $2$ gallon bucket and a $3.5$ gallon bucket. 
@@ -548,9 +448,10 @@ If there is at least $5$ gallons of milk in the bin, she can also remove $2$ gal
 What is the least possible number of moves needed to end with exactly $15$ gallons of milk in the bin? 
 
 \section*{Moolan}
-On a trip to China, Bessie the Cow met a very old cow named Moolan. 
+On a trip to China, Bessie the Cow met a cow named Moolan. 
 Apparently, Moolan was once a great cow warrior! 
-If Bessie quadruples Moolan's age and subtracts $12$, the result will be the same if she triples Moolan's age and adds $11$. 
+If Bessie triples Moolan's age and subtracts $50$, she gets her own age.
+If Bessie quadruples her own age and subtracts $53$, she gets Moolan's age.
 How old is Moolan?
 
 \section*{Accowntant}
@@ -562,74 +463,25 @@ How many more dollars does Betty have than Bobby?
 
 \section*{Moovie Night}
 Farmer Julia built a new theater for Bessie the Cow and her friends! 
-Bessie has a lot of sheep friends, so she decides to rent the theater out to them for the night. 
-However, the sheep also have to bring their sheepdogs. 
-There is one sheepdog for every 30 sheep and theater has a total capacity for $\num[group-separator={,}]{20000}$ animals. 
-What is the greatest number of sheep that can attend the movie? 
-
-\section*{Moolik}
-Farmer Julia wants to measure out exactly $25.5$ gallons of milk in a large storage bin. 
-The bin is initially empty. 
-Farmer Julia has a $2$ gallon bucket and a $3.5$ gallon bucket. 
-In one move, she can add $2$ gallons of milk to the bin or add $3.5$ gallons of milk to the bin. 
-If there is at least $5$ gallons of milk in the bin, she can also remove $2$ gallons of milk or remove $3.5$ gallons of milk in one move. 
-What is the least possible number of moves needed to end with exactly $15$ gallons of milk in the bin?
-
-\section*{Permootations}
-“Miss, why was this question marked in red?” Cowboy Alex pointed at the problem on his sheet, where he had written $\frac{1}{4} \cdot \frac{8}{5} = \frac{18}{45}$. 
-“I converted it to decimal form on my calculator and it was correct.”
-
-“Well, Alex, the answer is right,” the teacher admitted. 
-“But you should have simplified out the $9$’s to get $\frac{2}{5}$, which is in simplest form. 
-What’s wrong is your multiplication algorithm. 
-When we multiply $\frac{1}{4}$ by $\frac{8}{5}$, we cannot conjoin $1$ and $8$ for the numerator, or conjoin $4$ and $5$ for the denominator. 
-We must multiply $1$ by $8$, and $4$ by $5$.”
-
-Cowboy Alex was a precocious child, and so he decided to memorize all of the permutations of fraction multiplication equations where his algorithm would work. 
-Assuming that all equations are in the format $\frac{a}{b} \cdot \frac{c}{d}$ where $a$, $b$, $c$, and $d$ are single non-zero digits, how many equations could he solve with his algorithm? 
-The order that the fractions are multiplied in do not matter, so $\frac{1}{4} \cdot \frac{8}{5}$ is equivalent to $\frac{8}{5} \cdot \frac{1}{4}$.
-
-\section*{Cattle Drive}
-Four ranches——Almosta Ranch, Birch Wood Farm, Cedar Tree Hollow, and Daisy Dale—lie at the corners of a geometric square. 
-The distance between Almosta Ranch and Birch Wood Farm, Birth Wood Farm and Cedar Tree Hollow, Cedar Tree Hollow and Daisy Dale, and Almosta Ranch and Daisy Dale is exactly $56$ miles. 
-On the urging of Bessie the Cow, Rancher Cedric decided to connect all of the ranches together using the shortest possible network of roads. 
-How many miles of road will Rancher Cedric need to build? 
-
-\section*{Cow Party}
-Farmer Julia baked a $10$ by $10$ by $10$ inch cube cake for Bessie the Cow’s birthday. 
-She covered all sides with red frosting—even the bottom! 
-Then, she cut the cake into $10$ by $10$ by $1$ inch slices. 
-When she realized that she had to serve $250$ cows with her cake, she then cut each slice into twenty-five $2$ by $2$ by $1$ inch blocks. 
-How many of the $250$ blocks have exactly one face with red frosting on it? 
-
-\section*{Cownting the Farm Animals}
-Farmer Pearson has quite a small farm! He has cows, chickens, and fish. 
-On the farm, there are a total of $50$ legs, $48$ eyes, and $6$ wings. 
-Assuming that each cow has $4$ legs, each chicken has $2$ legs and $2$ wings, and each animal has $2$ eyes, how many animals are on Farmer Pearson's farm?
+Bessie likes to eat popcorn and drink Cocow-Cola when watching moovies.
+Bessie drinks $8$ grams of Cocow-Cola for every $10$ grams of popcorn that she eats.
+If the total mass of the popcorn and the Cocow-Cola that she consumed is $3060$ grams, how many grams of popcorn did she eat?
 
 \section*{Spot the Brown Calves}
-On Rancher Cedric's farm, there are $292$ cows. 
-$90$ are calves, $80$ have brown spots, and $145$ are neither calves nor have brown spots. 
-How many cows are calves with brown spots?
-
-\section*{One Cow, Two Cow, Red Cow, Blue Cow}
-In Moo Moo Meadows, there lived four different colored cows. 
-They were named Red, White, Blue, and Grey according to their coat colors. 
-Each cow wore a cowbell that is the same color as the name of one of the other three cows. 
-Their cowbell does not correspond to their own names. 
-Red and White lived in the same barn as the cow with the grey cowbell. 
-The cow with the red cowbell lived next to White. 
-Which cow wore the white cowbell?
+On Rancher Cedric's farm, there are $100$ cows. 
+$41$ are calves, and $15$ of the calves have brown spots.
+$45$ of the cows are not calves and don't have brown spots.
+How many cows have brown spots?
 
 \section*{Pocowmon Cards}
 Farmer Julia bought some Pocowmon cards for her cows!
 While Bessie the Cow and her sister, Bailey the Cow are trading their Pocowmon cards, they notice something interesting.
-Bessie tells Bailey, ``If you give me $4$ cards, we will each have the same number of cards.''
-Bailey then tells Bessie, ``If you give me $4$ cards, I will have five times as many cards as you will have.''
+Bessie tells Bailey, ``If you give me $4$ cards, the ratio between the number of cards I have and the number of cards you have will be $3 : 2$.''
+Bailey then tells Bessie, ``If you give me $18$ cards, I will have four times as many cards as you.''
 How many Pocowmon cards does Bessie have?
 
 \section*{Holy Cow, Another Pen!}
-\begin{wrapfigure}{r}{0.35\linewidth}
+\begin{wrapfigure}{r}{0.4\linewidth}
 	\vspace{-20pt}
 	\centering
 	\begin{tikzpicture}[scale=0.5]
@@ -641,7 +493,9 @@ How many Pocowmon cards does Bessie have?
 		\tkzDefPoint(7,0){D}
 		\tkzDrawSegment(C,D)
 		\tkzLabelPoint[above](C){$A$}
-		\tkzLabelPoint[below left](D){$D$}
+		\tkzLabelPoint[below](D){$D$}
+		\tkzLabelPoint[left](A){$B$}
+		\tkzLabelPoint[right](B){$C$}
 
 		\tkzLabelSegment[below](A,D){$12$}
 		\tkzLabelSegment[below](D,B){$7$}
@@ -652,52 +506,11 @@ How many Pocowmon cards does Bessie have?
 \end{wrapfigure}
 Cowboy Alex built another pen for his farm animals.
 This time, the pen is in the shape of the triangle shown in this figure and its side lengths are $18$, $15$, and $19$ feet.
-He divides the pen into two parts by building a straight fence from point $A$ to point $D$, where point $D$ divides the $19$ foot side into $12$ and $7$ feet segments.
+He divides the pen into two parts by building a straight fence from point $A$ to point $D$, where point $D$ is $12$ feet away from point $B$ and $7$ feet away from point $C$.
 What is the ratio between the area of the left part and the area of the right part?
 
-\section*{Bells for Bessie}
-Bessie the Cow has a large collection of vintage bells!
-Only one of the statements below is true:
-\begin{itemize}
-	\item Bessie owns at least $77$ bells.
-	\item Bessie owns at least $62$ bells.
-	\item Bessie owns at least $45$ bells.
-\end{itemize}
-What is the greatest number of bells Bessie can own?
-
-\section*{Dough-Decahedron}
-Bessie the Cow was gifted a large set of modeling clay!
-She decides to combine all the colors and make a rainbow dodecahedron.
-Then, she decides that it doesn't look cool enough, so she cuts off every corner of the dodecahedron.
-How many edges does the new figure have?
-
-\section*{The Duck Pond}
-\begin{wrapfigure}{r}{0.35\linewidth}
-	\vspace{-20pt}
-	\centering
-	\begin{tikzpicture}
-		\tkzDefPoint(0,0){A}
-		\tkzDefPoint(0,3){B}
-		\tkzDefPoint(5,0){C}
-		\tkzDrawPolygon(A,B,C)
-		\tkzMarkRightAngle(B,A,C)
-
-		\tkzDrawCircle[in](A,B,C)
-		\tkzGetPoint{D}
-
-		% Finish drawing radius for diagram
-	\end{tikzpicture}
-	\vspace{-20pt}
-\end{wrapfigure}
-Farmer Julia built an enclosure in the shape of a right triangle to keep her ducks.
-In the pen, made space for an incircle so that her ducks could have a nice pond.
-She decides to make the side lengths of her right triangle shaped pen, $12$, $35$, and $37$ yards long.
-The incircle of a triangle is a circle tangent to all three sides of the triangle, as shown in this example.
-What is the radius of the incircle of the right triangle shaped?
-
-\section*{Decalf Cowffee}
-Bessie the Cow brought in a box of $100$ cowffee pods for the farm's new cowffee maker.
-The box contains $100$ total cowffee pods with four flavors: $48$ are declf, $30$ are French vnilla, $12$ are hazelnut, and $10$ are cowramel.
-However, they don't have any labels and all have the same packaging, so nobody knows the flavor of any cowffee pod.
-What is the least number of cowffee pods that Bessie must take to be certain that she has at least $15$ pieces of the same flavor?
+\section*{Cowbe}
+Bessie the Cow found a cube.
+She random$y$ chose one corner of the cube, and Elsie random$y$ chose a different corner of the cube.
+What is the probability that the corner which Bessie chose and the corner which Elsie chose are connected by an edge of the cube?
 \end{document}
