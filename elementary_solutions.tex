@@ -1,6 +1,7 @@
 \documentclass{article}
 
 \usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
 
 \title{2021 Castro Valley Junior Math Tournament \\ Elementary School Division Solutions}
 \author{}
@@ -86,7 +87,7 @@ The first rule in the paper checks for divisibility by $2$, the second rule chec
 Therefore, the paper is claiming that any integer greater than $5$ which is not a multiple of $2$, $3$, or $5$ is either a prime or a power of a prime.
 To disprove this, we can find a number that is not a multiple of $2$, $3$, or $5$ and is not a prime or a power of a prime.
 Our number must have at least two different prime factors in order for it to not be a power of a prime, and we can't have $2$, $3$, or $5$ as prime factors.
-We can just take any two primes that aren't $2$, $3$, or $5$ and multiply them together.
+We can take any two primes that aren't $2$, $3$, or $5$ and multiply them together.
 For example, one answer would be $7 \cdot 11 = 77$.
 
 \section{Holy Cow, A New Pen!}
@@ -111,7 +112,7 @@ If we subtract $2 + 4 + 6 + 7 + 8$ from $42$, we get $15$ as the number of cows 
 \section{On the Moove}
 After $2$ hours, Bessie is $42 \cdot 2 = 84$ miles north of the barn.
 Bailey is $84 - 30 = 54$ miles north of the barn.
-Bailey traveled $54$ miels north in $2$ hours, so she was travelling at $\frac{54}{2} = 27$ miles per hour to the north.
+Bailey traveled $54$ miles north in $2$ hours, so she was travelling at $\frac{54}{2} = 27$ miles per hour to the north.
 
 \section{Cowld}
 First, divide the pattern in to a grid of nine squares.
@@ -120,4 +121,101 @@ The area of the pattern is $90 \cdot 90 = 8100$ square inches and a third of it 
 The pattern is repeated $36$ times, so the total area of the black fabric is $2700 \cdot 36 = 97200$ square inches.
 
 \section{Cownt the Rectangles}
+The figure is a grid with one segment missing.
+To count the number of rectangles in this figure, we can use complementary counting.
+We'll first count the number of rectangles in a grid that is not missing a segment, and then we'll subtract the number of rectangles which contain the missing segment.
+To count the number of rectangles in a four by five grid, we can count the number of ways to choose the positions of the four edges of the rectangles.
+We need to choose two out of the five horizontal lines for the top edge and the bottom edge, and two out of the six vertical lines for the left edge and the right edge.
+There are $\binom{5}{2} = \frac{5 \cdot 4}{2} = 10$ ways to choose the horizontal edges and $\binom{6}{2} = \frac{6 \cdot 5}{2} = 15$ ways to choose the vertical edges, so there are $10 \cdot 15 = 150$ rectangles in a grid that's not missing a segment.
+
+Now we'll count the number of these rectangles which contain the missing segment.
+The top edge must be above the segment and the bottom edge must be below it, so there are $3$ ways to choose the top edge and $2$ ways to choose the bottom edge.
+One of the vertical edges must be on the fourth vertical line from the left, and the other vertical edge can be any of the remaining $5$ vertical lines, so there are $5$ ways to choose the vertical edges.
+The number of rectangles containing the missing segment is then $2 \cdot 3 \cdot 5 = 30$, and the answer is $150 - 30 = 120$.
+
+We can also group the rectangles by their shape and count the number of rectangles of each shape.
+For example, we can first count the number of rectangles containing a single grid cell, then count the number of rectangles consisting of two cells connected side-by-side, the number of rectangles consisting of two cells connected vertically, and so on.
+We accidentally made the grid a bit too big but this should still be possible if done carefully enough.
+
+\section{Soccow}
+Let $x$ be the number of games that the team needs to win.
+The total number of wins is $2 + x$, and the number of losses is $8 + 30 - x = 38 - x$.
+The number of wins needs to be at least twice as much as the number of losses, so $2 + x \geq 2(38 - x)$.
+Expanding the right side gives $2 + x \geq 76 - 2x$.
+Adding $2x$ to both sides and subtracting $2$ from both sides gives $3x \geq 74$, so $x \geq \frac{74}{3}$.
+$\frac{74}{3}$ is about $24.7$, so we should round it up to $25$.
+
+Alternatively, we can see that there are $40$ games in total, and we can use trial and error to figure out how many games we need to win in total in order to have twice as many wins as losses.
+If we won $26$ games, then we lost $14$ games, and $26$ is less than twice of $14$.
+If we won $27$ games, then we lost $13$ games, and $27$ is greater than twice of $13$, so we need to win at least $27$ games in total.
+We already won $2$ games, so we need to win $25$ of the remaining games.
+
+\section{Green Cows 1}
+First of all, $3$ hours is $3 \cdot 60 = 180$ minutes.
+Bessie can chow a field in $180$ minutes, so she can chow $\frac{1}{180}$ fields per minute.
+Elsie can chow a field in $4$ minutes, so she can chow $\frac{1}{4}$ fields per minute.
+It follows that together, they can chow $\frac{1}{180} + \frac{1}{4} = \frac{1}{180} + \frac{45}{180} = \frac{46}{180} = \frac{23}{90}$ fields per minute.
+Therefore, it takes them $\frac{90}{23}$ minutes to chow a field.
+
+\section{Green Cows 2}
+One cow can chow $\frac{8}{5}$ square meters of grass in $20$ minutes, so it can chow $\frac{8}{5 \cdot 20} = \frac{2}{25}$ square meters of grass per minute.
+Let $x$ be the number of cows needed to chow $10$ square meters in $15$ minutes.
+$x$ cows can chow $\frac{2}{25}x \cdot 15 = \frac{6}{5}x$ square meters in $15$ minutes, so $\frac{6}{5}x = 10$ and $x = \frac{25}{3}$.
+This is about $8.3$, and we round it up to $9$ since we can't have a fractional number of cows.
+
+Another way to think about this is that we're increasing the amount of grass by a factor of $\frac{10}{8} = \frac{5}{4}$, so the number of cows should also be increased by the same factor.
+We're decreasing the amount of time by a factor of $\frac{15}{20} = \frac{3}{4}$, so we should increase the number of cows by the reciprocal of this factor $\frac{4}{3}$ as the number of cows is inversely proportional to the time.
+The number of cows needed is then $5 \cdot \frac{5}{4} \cdot \frac{4}{3} = \frac{25}{3}$ which rounds up to $9$.
+
+\section{Moogic}
+We can't change the sums of every row or every column by changing only two numbers, so one of the current sums must be the sum in the final magic square.
+If we compute the sum of each row, each column, and each diagonal in the given square, we see that the most common value is $48$, so we could try to change all the sums to $48$.
+The last row and the middle column needs to have their sum decreased by $4$, the middle row and the right column needs to have their sums increased by $2$, and the diagonals already sum to $48$.
+This leads us to try changing $7$ to $3$ and changing $3$ to $5$, which does result in a magic square.
+This isn't necessary but we can verify that this is the only solution by trying each of the other two sums in the initial square.
+
+\section{Mooish}
+If Annabelle's statement was false, then all of the cows must be truthy.
+This is impossible because if Annabelle's statement was false then she would be falsy.
+Therefore, Annabelle's statement must be true and she is truthy.
+There is at least one falsy cow and Annabelle isn't falsy, so at least one of Bossy and Cornelius must be falsy.
+Bossy said they were both truthy, so she lied and she is falsy.
+Since Bossy is falsy, Cornelius told the truth, so the is truthy.
+
+\section{Cowkies}
+The total number of spots is $87 + 83 = 170$.
+Every cow has $5$ spots, so there are $\frac{170}{5} = 34$ cows.
+
+A system of equations would also work.
+$2a + 3b = 87$ and $3a + 2b = 83$, so adding the two equations results in $5a + 5b = 170$ and $a + b = 34$.
+
+\section{Moorio Kart}
+The total number of ``likes'' is $86 + 25 + 67 = 178$.
+Each cow contributes at most two ``likes'' to this sum, so we must have at least $\frac{178}{2} = 89$ cows.
+Now we need to make sure that it is possible to have only $89$ cows, each of which likes exactly two courses.
+Assume that every cow liked two courses.
+$86$ cows liked Bowser Cowstle, so $89 - 86 = 3$ cows didn't like Bowser Cowstle.
+These are the cows who liked Cowconut Mall and Moo Moo Meadows.
+Similarly, there are $89 - 25 = 64$ cows who didn't like Cowconut Mall and therefore liked Bowser Cowstle and Moo Moo Meadows.
+There are $89 - 67 = 22$ cows who liked Bowser Cowstle and Cowconut Mall.
+We can verify that everything adds up to the values given in the problem, therefore it is possible to have $89$ cows.
+We can't have less than $89$ cows, so this is the minimum possible number of cows.
+
+\section{Moo York Bagels}
+The problem is asking for the expected value of the amount of money that Bessie spends on bagels each day.
+The expected value is the sum of the value of each outcome multiplied by the probability of that outcome.
+The probability that Bessie is happy is $0.68$ and the probability that she is sad is $1 - 0.68 = 0.32$, so the expected value is $\$1000 \cdot 0.68 + \$620 \cdot 0.32 = \$878.40$.
+
+\section{Mooilk}
+The order of the moves doesn't really matter, so we can assume that Farmer Julia made all of the moves that added milk to the bin before the moves which removed milk from the bin.
+There's no reason for her to make a move adding milk to the bin and then removing the same amount later, so each of the buckets was either only used to add milk or only used to remove milk.
+
+We'll define variables $x$ and $y$ to represent the number of moves which Farmer Julia made with the $2$ gallon bucket and the number of moves which she made with $3.5$ gallon bucket respectively.
+Positive numbers represent moves adding milk to the bin, and negative numbers represent moves removing milk from the bin.
+$2x + 3.5y = 25.5$, so we just need to find the integer solution to this equation such that the sum of the absolute values of $x$ and $y$ is minimized.
+
+There are several ways to do this.
+For example, we can try plugging different values of $y$ and finding the corresponding value of $x$, or we can graph this equation and check the lattice points which the line passes through.
+One solution is $x = 4$ and $y = 5$, which represents four moves adding milk with the $2$ gallon bucket and five moves adding milk with the $3.5$ gallon bucket, for a total of $9$ moves.
+We can verify that this is the least possible number of moves by trying out every possible value of $x$ or $y$ from $-9$ to $9$.
 \end{document}
